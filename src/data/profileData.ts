@@ -4,105 +4,45 @@
  * @file Fonte da verdade para todos os dados do portfólio de Guilherme dos Anjos Macedo.
  */
 
-import { Briefcase, Rocket, Users, Target } from 'lucide-react';
+import { Briefcase, Rocket, Wrench, GraduationCap } from 'lucide-react';
 import type { ProfileData, Project, BlogPost, AboutSectionData } from '../types/portfolio';
 
 // --- SEÇÃO: PORTFÓLIO ---
 const PORTFOLIO_DATA: Project[] = [
-  {
-    id: 1,
-    category: 'API',
-    title: 'MovieFlix API',
-    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=MovieFlix+API',
-    details: {
-      project: 'API REST para catálogo de filmes',
-      language: 'Node.js, Express, PostgreSQL',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/MovieFlix-API',
-      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=MovieFlix+API',
-    },
-  },
-  {
-    id: 2,
-    category: 'FULL-STACK',
-    title: 'Finance App',
-    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Finance+App',
-    details: {
-      project: 'Controle de finanças pessoais',
-      language: 'TypeScript, Nest.js, MongoDB',
-      client: 'Projeto Pessoal (em desenvolvimento)',
-      previewUrl: 'https://github.com/Guilherme-dev15/Finance-App',
-      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Finance+App',
-    },
-  },
-  {
-    id: 3,
-    category: 'FULL-STACK',
-    title: 'Costs Project',
-    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Costs',
-    details: {
-      project: 'Gerenciamento de custos de projetos',
-      language: 'React.js, Node.js',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/Costs-Project',
-      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Costs+Project',
-    },
-  },
-  {
-    id: 4,
-    category: 'FRONT-END',
-    title: 'Pokémon Pokedex',
-    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Pokedex',
-    details: {
-      project: 'Pokedex com busca e filtros',
-      language: 'React.js, JavaScript, API REST',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/Pokemon-Pokedex',
-      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Pokedex',
-    },
-  },
+  { id: 1, category: 'API', title: 'MovieFlix API', imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=MovieFlix+API', details: { project: 'API REST para catálogo de filmes', language: 'Node.js, Express, PostgreSQL', client: 'Projeto Pessoal', previewUrl: 'https://github.com/Guilherme-dev15/MovieFlix-API', modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=MovieFlix+API' } },
+  { id: 2, category: 'FULL-STACK', title: 'Finance App', imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Finance+App', details: { project: 'Controle de finanças pessoais', language: 'TypeScript, Nest.js, MongoDB', client: 'Projeto Pessoal (em desenvolvimento)', previewUrl: 'https://github.com/Guilherme-dev15/Finance-App', modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Finance+App' } },
+  { id: 3, category: 'FULL-STACK', title: 'Costs Project', imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Costs', details: { project: 'Gerenciamento de custos de projetos', language: 'React.js, Node.js', client: 'Projeto Pessoal', previewUrl: 'https://github.com/Guilherme-dev15/Costs-Project', modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Costs+Project' } },
+  { id: 4, category: 'FRONT-END', title: 'Pokémon Pokedex', imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Pokedex', details: { project: 'Pokedex com busca e filtros', language: 'React.js, JavaScript, API REST', client: 'Projeto Pessoal', previewUrl: 'https://github.com/Guilherme-dev15/Pokemon-Pokedex', modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Pokedex' } },
 ];
 
 // --- SEÇÃO: BLOG ---
 const BLOG_DATA: BlogPost[] = [
-  {
-    title: 'Como Criei Minha Primeira API REST com Node.js e Express',
-    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=API+com+Node.js',
-    snippet: 'Um guia passo a passo sobre a arquitetura, autenticação e desafios encontrados durante o desenvolvimento da MovieFlix API...',
-  },
-  {
-    title: 'De Suporte de TI para Desenvolvedor: Minha Jornada de Transição',
-    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Carreira',
-    snippet: 'Compartilhando as lições aprendidas, os desafios superados e as habilidades que transferi da infraestrutura para o desenvolvimento...',
-  },
-  {
-    title: 'Por Que Escolhi Nest.js para Meu Novo Projeto Full Stack',
-    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Nest.js',
-    snippet: 'Analisando os benefícios do Nest.js, como a arquitetura modular, injeção de dependência e o uso de TypeScript...',
-  },
+  { title: 'Como Criei Minha Primeira API REST com Node.js e Express', imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=API+com+Node.js', snippet: 'Um guia passo a passo sobre a arquitetura, autenticação e desafios encontrados durante o desenvolvimento da MovieFlix API...' },
+  { title: 'De Suporte de TI para Desenvolvedor: Minha Jornada de Transição', imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Carreira', snippet: 'Compartilhando as lições aprendidas, os desafios superados e as habilidades que transferi da infraestrutura para o desenvolvimento...' },
+  { title: 'Por Que Escolhi Nest.js para Meu Novo Projeto Full Stack', imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Nest.js', snippet: 'Analisando os benefícios do Nest.js, como a arquitetura modular, injeção de dependência e o uso de TypeScript...' },
 ];
 
-// --- SEÇÃO: SOBRE MIM (Seus dados reais) ---
+// --- SEÇÃO: SOBRE MIM ---
 const ABOUT_ME_DATA: AboutSectionData = {
   personal: [
     { key: 'First Name', value: 'Guilherme' },
-    { key: 'Last Name', value: 'Anjos' }, // ATUALIZADO
+    { key: 'Last Name', value: 'Anjos' },
     { key: 'Age', value: '27 Years' },
     { key: 'Nationality', value: 'Brazilian' },
     { key: 'Freelance', value: 'Available', highlight: true },
     { key: 'Address', value: 'São Paulo - SP, Brazil' },
-    { key: 'Phone', value: '+55 11 97839-9326' },
+    // ATUALIZADO: Ordem invertida para corresponder à sua solicitação
     { key: 'Email', value: 'guilherme.macedo1598@gmail.com' },
-    // ATUALIZADO: Usando 'username' para exibição e a URL completa nos dados
+    { key: 'Phone', value: '+55 11 97839-9326' },
     { key: 'LinkedIn', value: 'https://www.linkedin.com/in/guilherme-a-anjos/' },
     { key: 'GitHub', value: 'https://github.com/Guilherme-dev15' },
     { key: 'Languages', value: 'Portuguese (Native), English (Technical)' },
   ],
   stats: [
     { count: '5+', label: 'ANOS DE EXPERIÊNCIA EM TI', icon: Briefcase },
-    { count: '20+', label: 'PROJETOS COMPLETOS', icon: Rocket },
-    { count: '10+', label: 'CLIENTES SATISFEITOS', icon: Users },
-    { count: 'R$1M', label: 'META DE FATURAMENTO', icon: Target },
+    { count: '20+', label: 'PROJETOS NO GITHUB', icon: Rocket },
+    { count: '15+', label: 'TECNOLOGIAS & FERRAMENTAS', icon: Wrench },
+    { count: '10+', label: 'CURSOS E FORMAÇÕES', icon: GraduationCap },
   ],
   skills: [
     { name: 'JavaScript (ES6+)', percent: 85 },

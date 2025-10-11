@@ -5,15 +5,16 @@ import './App.css';
 
 import PROFILE_DATA from './data/profileData';
 
+// Importando todos os componentes
 import HomeSection from './pages/Home';
-import AboutMeSection from './pages/AboutMeSection'; // IMPORTANDO A NOVA SEÇÃO
+import AboutMeSection from './pages/AboutMeSection'; // Importando a nova seção
 import PortfolioSection from './pages/PortfolioSection';
 import BlogSection from './pages/Blog';
 import ContactSection from './pages/Contact';
-import AboutMeModal from './pages/AboutMeModal'; // Este é o modal de resumo
+import AboutMeModal from './pages/AboutMeModal'; // O modal que já tínhamos
 import Sidebar from './layouts/Sidebar';
 
-// ATUALIZADO: 'about' agora é uma seção principal
+// Tipos para controle de estado e navegação
 type SectionId = 'home' | 'about' | 'portfolio' | 'blog' | 'contact';
 type ActiveSection = SectionId;
 
@@ -21,19 +22,21 @@ const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<ActiveSection>('home');
   const [isAboutMeModalOpen, setIsAboutMeModalOpen] = useState(false);
 
+  // Adicionando a ref para a nova seção 'about'
   const sectionRefs = useMemo(() => ({
     home: React.createRef<HTMLElement>(),
-    about: React.createRef<HTMLElement>(), // ADICIONADO REF PARA A NOVA SEÇÃO
+    about: React.createRef<HTMLElement>(),
     portfolio: React.createRef<HTMLElement>(),
     blog: React.createRef<HTMLElement>(),
     contact: React.createRef<HTMLElement>(),
   }), []);
 
+  // Funções para controlar apenas o modal
   const openAboutMeModal = useCallback(() => setIsAboutMeModalOpen(true), []);
   const closeAboutMeModal = useCallback(() => setIsAboutMeModalOpen(false), []);
 
+  // A navegação da sidebar agora rola para as seções, incluindo a nova 'about'
   const handleNavClick = (sectionId: ActiveSection) => {
-    // A lógica agora é simples: apenas rola para a seção correspondente.
     sectionRefs[sectionId]?.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -70,7 +73,7 @@ const App: React.FC = () => {
           <HomeSection data={PROFILE_DATA} onOpenAboutMe={openAboutMeModal} />
         </section>
 
-        {/* ADICIONADO: A nova seção de tela cheia "About Me" */}
+        {/* A nova seção "About Me" de página inteira está aqui */}
         <section id="about" ref={sectionRefs.about}>
           <AboutMeSection data={PROFILE_DATA.about} />
         </section>
@@ -86,7 +89,7 @@ const App: React.FC = () => {
         </section>
       </main>
 
-      {/* O modal de resumo, que continua sendo controlado pelo seu próprio estado */}
+      {/* O modal continua aqui, mas é acionado apenas pelo botão "MORE ABOUT ME" */}
       <AboutMeModal isOpen={isAboutMeModalOpen} onClose={closeAboutMeModal} data={PROFILE_DATA} />
     </div>
   );
