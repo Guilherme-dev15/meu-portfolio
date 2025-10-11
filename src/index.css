@@ -1,0 +1,54 @@
+/*
+  Arquivo: src/App.css
+  Este arquivo é o ponto de entrada para estilos globais e diretivas do Tailwind.
+*/
+
+/* 1. Diretivas do Tailwind CSS */
+/* Se você estiver usando uma configuração externa, certifique-se de que estas estão presentes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Estilos Globais e Reset (opcional, mas recomendado) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Garante que padding e border não quebrem o layout */
+}
+
+:root {
+  /* Define a cor primária para o tema dark, consistente com o bg-gray-900 */
+  --color-bg-primary: #111827; 
+}
+
+body {
+  /* Garante a aplicação do fundo escuro e da fonte Inter (ou a que você preferir) */
+  background-color: var(--color-bg-primary);
+  font-family: 'Inter', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  /* Adiciona min-height para garantir que o corpo ocupe pelo menos a altura da tela */
+  min-height: 100vh; 
+}
+
+/* 3. Estilos de Rolagem para o Tema Dark (para navegadores Webkit como Chrome/Safari) */
+/* Isso torna a barra de rolagem do modal e da página mais discreta e estilizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* cinza escuro */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b; /* amarelo (yellow-500) */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706; /* amarelo mais escuro no hover */
+}
