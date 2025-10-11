@@ -1,161 +1,130 @@
 // src/data/profileData.ts
 
 /**
- * @file Contém todos os dados estáticos da aplicação.
- * Este arquivo serve como a única fonte da verdade para a estrutura de dados,
- * garantindo consistência e facilitando a manutenção.
+ * @file Fonte da verdade para todos os dados do portfólio de Guilherme dos Anjos Macedo.
+ * Estruturado para corresponder às interfaces em `src/types/portfolio.ts`.
  */
 
-import { Briefcase, Zap, Smile, Trophy } from 'lucide-react';
+import { Briefcase, Rocket, Users, Target } from 'lucide-react';
 import type { ProfileData, Project, BlogPost, AboutSectionData } from '../types/portfolio';
 
-// --- SEÇÃO: PORTFÓLIO ---
+// --- SEÇÃO: PORTFÓLIO (Atualizado com seus projetos e categorias corretas) ---
 const PORTFOLIO_DATA: Project[] = [
   {
     id: 1,
-    category: 'MOCKUP',
-    title: 'Origami Star',
-    imageSrc: 'https://placehold.co/400x300',
+    category: 'API', // CORREÇÃO: Categoria válida
+    title: 'MovieFlix API',
+    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=MovieFlix+API',
     details: {
-      project: 'Website',
-      language: 'HTML, CSS, Javascript',
-      client: 'Themeforest',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400',
+      project: 'API REST para catálogo de filmes',
+      language: 'Node.js, Express, PostgreSQL',
+      client: 'Projeto Pessoal',
+      previewUrl: 'https://github.com/GuilhermeAnjosT/MovieFlix-API',
+      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=MovieFlix+API',
     },
   },
   {
     id: 2,
-    category: 'GRAPHIC DESIGN',
-    title: 'Maneki-neko Cat',
-    imageSrc: 'https://placehold.co/400x300/',
+    category: 'FULL-STACK', // CORREÇÃO: Categoria válida
+    title: 'Finance App',
+    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Finance+App',
     details: {
-      project: 'Graphic Design',
-      language: 'Adobe Illustrator',
-      client: 'Envato',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400',
+      project: 'Controle de finanças pessoais',
+      language: 'TypeScript, Nest.js, MongoDB',
+      client: 'Projeto Pessoal (em desenvolvimento)',
+      previewUrl: 'https://github.com/GuilhermeAnjosT/Finance-App',
+      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Finance+App',
     },
   },
   {
     id: 3,
-    category: 'MOCKUP',
-    title: 'Hardware Tools',
-    imageSrc: 'https://placehold.co/400x300/',
+    category: 'FULL-STACK', // CORREÇÃO: Categoria válida
+    title: 'Costs Project',
+    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Costs',
     details: {
-      project: 'Product Renders',
-      language: 'Blender, Photoshop',
-      client: 'Hardware Inc.',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400/',
+      project: 'Gerenciamento de custos de projetos',
+      language: 'React.js, Node.js',
+      client: 'Projeto Pessoal',
+      previewUrl: 'https://github.com/GuilhermeAnjosT/Costs-Project',
+      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Costs+Project',
     },
   },
   {
     id: 4,
-    category: 'LOGO',
-    title: 'Fortune Cookies',
-    imageSrc: 'https://placehold.co/400x300/',
+    category: 'FRONT-END', // CORREÇÃO: Categoria válida
+    title: 'Pokémon Pokedex',
+    imageSrc: 'https://placehold.co/400x300/252525/d4af37?text=Pokedex',
     details: {
-      project: 'Branding',
-      language: 'Adobe Illustrator',
-      client: 'Food Co.',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400/',
-    },
-  },
-  {
-    id: 5,
-    category: 'VIDEO',
-    title: 'Butterfly Effect',
-    imageSrc: 'https://placehold.co/400x300/',
-    details: {
-      project: 'Short Film',
-      language: 'Adobe Premiere Pro',
-      client: 'Indie Film Fest',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400/',
-    },
-  },
-  {
-    id: 6,
-    category: 'GRAPHIC DESIGN',
-    title: 'Pink Flower',
-    imageSrc: 'https://placehold.co/400x300/',
-    details: {
-      project: 'Illustration',
-      language: 'Procreate',
-      client: 'Art Magazine',
-      previewUrl: 'https://example.com',
-      modalImageSrc: 'https://placehold.co/600x400/',
+      project: 'Pokedex com busca e filtros',
+      language: 'React.js, JavaScript, API REST',
+      client: 'Projeto Pessoal',
+      previewUrl: 'https://github.com/GuilhermeAnjosT/Pokemon-Pokedex',
+      modalImageSrc: 'https://placehold.co/600x400/252525/d4af37?text=Pokedex',
     },
   },
 ];
 
-// --- SEÇÃO: BLOG ---
+// --- SEÇÃO: BLOG (Corrigido para usar 'imageSrc') ---
 const BLOG_DATA: BlogPost[] = [
   {
-      title: 'How to Own Your Audience by Creating an Email List',
-      imageSrc: 'https://placehold.co/400x250/',
-      snippet: 'Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack b...',
-      image: undefined
+    title: 'Como Criei Minha Primeira API REST com Node.js e Express',
+    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=API+com+Node.js', // CORREÇÃO
+    snippet: 'Um guia passo a passo sobre a arquitetura, autenticação e desafios encontrados durante o desenvolvimento da MovieFlix API...',
   },
   {
-      title: 'Top 10 Toolkits for Deep Learning in 2022',
-      imageSrc: 'https://placehold.co/400x250/',
-      snippet: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e...',
-      image: undefined
+    title: 'Por Que Escolhi Nest.js para Meu Novo Projeto Full Stack',
+    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Nest.js', // CORREÇÃO
+    snippet: 'Analisando os benefícios do Nest.js, como a arquitetura modular, injeção de dependência e o uso de TypeScript...',
   },
   {
-      title: 'Everything You Need to Know About Web Accessibility',
-      imageSrc: 'https://placehold.co/400x250/',
-      snippet: 'Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ma...',
-      image: undefined
+    title: 'De Suporte de TI para Desenvolvedor: Minha Jornada de Transição',
+    imageSrc: 'https://placehold.co/400x250/373737/d4af37?text=Carreira', // CORREÇÃO
+    snippet: 'Compartilhando as lições aprendidas, os desafios superados e as habilidades que transferi da infraestrutura para o desenvolvimento...',
   },
 ];
 
-// --- SEÇÃO: SOBRE MIM ---
+// --- SEÇÃO: SOBRE MIM (Seus dados reais, já corrigidos) ---
 const ABOUT_ME_DATA: AboutSectionData = {
   personal: [
-    { key: 'Primeiro Nome', value: 'Steve' },
-    { key: 'Último Nome', value: 'Milner' },
-    { key: 'Idade', value: '27 Anos' },
-    { key: 'Nacionalidade', value: 'Tunisiana' },
-    { key: 'Freelance', value: 'Disponível', highlight: true },
-    { key: 'Endereço', value: 'Tunis' },
-    { key: 'Telefone', value: '+21621184010' },
-    { key: 'Email', value: 'you@mail.com' },
-    { key: 'Skype', value: 'steve.milner' },
-    { key: 'Idiomas', value: 'Francês, Inglês' },
+    { key: 'First Name', value: 'Guilherme' },
+    { key: 'Last Name', value: 'dos Anjos Macedo' },
+    { key: 'Age', value: '27 Years' },
+    { key: 'Nationality', value: 'Brazilian' },
+    { key: 'Freelance', value: 'Available', highlight: true },
+    { key: 'Address', value: 'São Paulo - SP, Brazil' },
+    { key: 'Phone', value: '+55 11 97839-9326' },
+    { key: 'Email', value: 'guilherme.macedo1598@gmail.com' },
+    { key: 'LinkedIn', value: 'guilhermeanjosdev' },
+    { key: 'Languages', value: 'Portuguese (Native), English (Technical)' },
   ],
   stats: [
-    { count: '12+', label: 'ANOS DE EXPERIÊNCIA', icon: Briefcase },
-    { count: '97+', label: 'PROJETOS CONCLUÍDOS', icon: Zap },
-    { count: '81+', label: 'CLIENTES FELIZES', icon: Smile },
-    { count: '53+', label: 'PRÊMIOS GANHOS', icon: Trophy },
+    { count: '5+', label: 'ANOS DE EXPERIÊNCIA EM TI', icon: Briefcase },
+    { count: '20+', label: 'PROJETOS COMPLETOS', icon: Rocket },
+    { count: '10+', label: 'CLIENTES SATISFEITOS', icon: Users },
+    { count: 'R$1M', label: 'META DE FATURAMENTO', icon: Target },
   ],
   skills: [
-    { name: 'HTML', percent: 25 },
-    { name: 'JAVASCRIPT', percent: 89 },
-    { name: 'CSS', percent: 70 },
-    { name: 'PHP', percent: 66 },
-    { name: 'WORDPRESS', percent: 95 },
-    { name: 'JQUERY', percent: 50 },
-    { name: 'ANGULAR', percent: 65 },
-    { name: 'REACT', percent: 45 },
+    { name: 'JavaScript (ES6+)', percent: 85 },
+    { name: 'TypeScript', percent: 70 },
+    { name: 'React.js', percent: 75 },
+    { name: 'Node.js', percent: 78 },
+    { name: 'SQL/PostgreSQL', percent: 75 },
+    { name: 'Infraestrutura/Deploy', percent: 80 },
+    { name: 'HTML5 & CSS3', percent: 90 },
+    { name: 'Metodologias Ágeis', percent: 80 },
   ],
   timeline: [
-    { type: 'experience', year: '2018 - PRESENTE', title: 'WEB DEVELOPER', institution: 'ENVATO', description: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipiscing elit.' },
-    { type: 'experience', year: '2013 - 2018', title: 'UI/UX DESIGNER', institution: 'THEMEFOREST', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { type: 'education', year: '2015', title: 'ENGENHARIA', institution: 'OXFORD UNIVERSITY', description: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipiscing elit.' },
-    { type: 'education', year: '2012', title: 'MESTRADO', institution: 'KIEV UNIVERSITY', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+    { type: 'experience', year: '2023 - ATUAL', title: 'ASSISTENTE DE INFRAESTRUTURA DE TI', institution: 'Pashal Locadora de Equipamentos', description: 'Suporte a ambientes críticos, administração de AD e Office 365, e atendimento técnico especializado via Zendesk.' },
+    { type: 'experience', year: '2021 - 2022', title: 'ANALISTA DE SUPORTE TÉCNICO', institution: 'Brint Comércio e Indústria', description: 'Suporte a sistemas WMS/WCS com bancos de dados Oracle e PostgreSQL, e gestão de acessos em Azure AD.' },
+    { type: 'education', year: '2019', title: 'TECNÓLOGO EM ANÁLISE E DESENV. DE SISTEMAS', institution: 'Universidade Cidade de São Paulo - UNICID', description: 'Formação superior focada em desenvolvimento de sistemas, banco de dados e arquitetura de software.' },
   ],
 };
 
 // --- ESTRUTURA DE DADOS PRINCIPAL ---
 const PROFILE_DATA: ProfileData = {
-  name: 'STEVE MILNER',
-  title: 'WEB DESIGNER',
-  shortDescription: "I'm a Tunisian based web designer & front-end developer focused on crafting clean & user friendly experiences. I am passionate about building excellent software that improves the lives of those around me.",
+  name: 'GUILHERME MACEDO',
+  title: 'FULL STACK DEVELOPER',
+  shortDescription: "Desenvolvedor Full Stack com 5+ anos de experiência em TI. Em transição de carreira da infraestrutura, trago uma visão sistêmica e forte capacidade de resolução de problemas para criar soluções web modernas com React, Node.js e TypeScript.",
   about: ABOUT_ME_DATA,
   portfolio: PORTFOLIO_DATA,
   blogPosts: BLOG_DATA,

@@ -1,3 +1,5 @@
+// src/types/portfolio.ts
+
 /**
  * @file Contém todas as definições de tipos e interfaces para a aplicação do portfólio.
  * Este arquivo serve como a única fonte da verdade para a estrutura de dados.
@@ -5,57 +7,46 @@
 
 import type { LucideIcon } from 'lucide-react';
 
-// ===============================================
-// 1. TIPOS DE DOMÍNIO (POR SEÇÃO)
-// ===============================================
-
 // --- Seção: Sobre Mim ---
 
-/** Representa uma entrada de informação pessoal, como "Nome" ou "Idade". */
 export interface PersonalInfo {
   key: string;
   value: string;
-  /** Se `true`, o valor deve receber um destaque visual na UI. */
   highlight?: boolean;
 }
 
-/** Representa uma estatística quantitativa, como "Anos de Experiência". */
 export interface Statistic {
   count: string;
   label: string;
   icon: LucideIcon;
 }
 
-/** Representa uma habilidade técnica ou ferramenta com seu nível de proficiência. */
 export interface Skill {
   name: string;
   percent: number;
 }
 
-/** Representa um item na linha do tempo, seja de experiência ou educação. */
 export interface TimelineItem {
   type: 'experience' | 'education';
   year: string;
   title: string;
-  institution: string; // Ex: Empresa ou Universidade
+  institution: string;
   description: string;
 }
 
 // --- Seção: Portfólio ---
 
-/** Categorias possíveis para um projeto do portfólio. */
-export type ProjectCategory = 'LOGO' | 'VIDEO' | 'GRAPHIC DESIGN' | 'MOCKUP';
+// ATUALIZADO: Categorias que refletem seus projetos reais.
+export type ProjectCategory = 'API' | 'FULL-STACK' | 'FRONT-END';
 
-/** Detalhes específicos de um projeto, exibidos no modal. */
 export interface ProjectDetails {
   project: string;
   language: string;
   client: string;
-  previewUrl: string;
+  previewUrl: string; // URL do GitHub ou do deploy
   modalImageSrc: string;
 }
 
-/** Representa um único projeto no portfólio. */
 export interface Project {
   id: number;
   category: ProjectCategory;
@@ -66,21 +57,15 @@ export interface Project {
 
 // --- Seção: Blog ---
 
-/** Representa uma única postagem no blog. */
 export interface BlogPost {
-  image: string | undefined;
   title: string;
   imageSrc: string;
   snippet: string;
-  /** URL amigável para a postagem completa (opcional). */
   slug?: string;
 }
 
-// ===============================================
-// 2. TIPOS DE AGREGAÇÃO PRINCIPAL
-// ===============================================
+// --- Tipos de Agregação ---
 
-/** Agrupa todos os dados relacionados à seção "Sobre Mim". */
 export interface AboutSectionData {
   personal: PersonalInfo[];
   stats: Statistic[];
@@ -88,10 +73,6 @@ export interface AboutSectionData {
   timeline: TimelineItem[];
 }
 
-/**
- * Interface principal que define a estrutura completa de todos os dados
- * necessários para renderizar o portfólio.
- */
 export interface ProfileData {
   name: string;
   title: string;
