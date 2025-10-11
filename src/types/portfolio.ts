@@ -68,6 +68,7 @@ export interface Project {
 
 /** Representa uma única postagem no blog. */
 export interface BlogPost {
+  image: string | undefined;
   title: string;
   imageSrc: string;
   snippet: string;
