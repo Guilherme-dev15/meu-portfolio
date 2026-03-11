@@ -101,17 +101,30 @@ export const Skills: React.FC<{ skills: Skill[] }> = React.memo(({ skills }) => 
 export const ExperienceAndEducation: React.FC<{ timeline: TimelineItemType[] }> = React.memo(({ timeline }) => {
   const experiences = timeline.filter((item) => item.type === 'experience');
   const educations = timeline.filter((item) => item.type === 'education');
+  
   return (
     <div>
       <SectionTitle>Experience & Education</SectionTitle>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-8">
-        <div>{experiences.map((item) => <TimelineItem key={`exp-${item.title}-${item.institution}`} {...item} />)}</div>
-        <div>{educations.map((item) => <TimelineItem key={`edu-${item.title}-${item.institution}`} {...item} />)}</div>
+        
+        {/* Coluna de Experiências com Scroll Invisível */}
+        <div className="max-h-[30rem] overflow-y-auto pr-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          {experiences.map((item) => (
+            <TimelineItem key={`exp-${item.title}-${item.institution}`} {...item} />
+          ))}
+        </div>
+
+        {/* Coluna de Educação com Scroll Invisível */}
+        <div className="max-h-[30rem] overflow-y-auto pr-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          {educations.map((item) => (
+            <TimelineItem key={`edu-${item.title}-${item.institution}`} {...item} />
+          ))}
+        </div>
+
       </div>
     </div>
   );
 });
-
 // --- COMPONENTE PRINCIPAL (MODAL) ---
 const AboutMeModal: React.FC<AboutMeModalProps> = ({ isOpen, onClose, data }) => {
   const { personal, stats, skills, timeline }: AboutSectionData = data.about;

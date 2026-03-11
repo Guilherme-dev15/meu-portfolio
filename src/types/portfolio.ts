@@ -37,7 +37,7 @@ export interface TimelineItem {
 // --- Seção: Portfólio ---
 
 // ATUALIZADO: Categorias que refletem seus projetos reais.
-export type ProjectCategory = 'API' | 'FULL-STACK' | 'FRONT-END';
+export type ProjectCategory = 'API' | 'FULL-STACK' | 'FRONT-END' | 'BACK-END' | 'MOBILE' | 'OUTROS';
 
 export interface ProjectDetails {
   project: string;
