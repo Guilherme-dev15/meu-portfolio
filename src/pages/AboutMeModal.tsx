@@ -71,7 +71,7 @@ export const PersonalInfos: React.FC<{ personal: PersonalInfo[] }> = React.memo(
     </div>
     <div className="mt-10 flex justify-start">
       <a
-        href="/data/cv-guilherme.pdf"
+        href="/curriculo.pdf"
         download="Guilherme_dos_Anjos_Macedo_CV.pdf"
         className="group relative inline-flex items-center justify-center py-3 px-8 text-sm font-bold text-white bg-transparent border-2 border-custom-gold rounded-full uppercase tracking-wider overflow-hidden transition-all duration-300 hover:text-dark-bg"
       >
