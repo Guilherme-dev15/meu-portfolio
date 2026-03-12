@@ -147,7 +147,8 @@ const ABOUT_ME_DATA: AboutSectionData = {
       year: '2021 - 2022',
       title: 'ANALISTA DE SUPORTE TÉCNICO',
       institution: 'Brint Comércio e Indústria',
-      description: 'Atuação como Suporte Técnico especializado em sistemas logísticos e corporativos (WMS, WCS e CRM). Experiência no diagnóstico de falhas em aplicações e validação de regras de negócio, com diferencial na execução de consultas em bancos de dados relacionais (Oracle e PostgreSQL) para análise de logs e rastreamento de incidentes em ambiente de produção.'
+      description: 'Análise de Dados (SQL): Execução de consultas avançadas em Oracle e PostgreSQL para validação em produção e análise de logs, corrigindo inconsistências em bases de clientes. Troubleshooting de Aplicações: Investigação profunda de falhas em software logístico (WMS, WCS, CRM), fornecendo evidências técnicas detalhadas para acelerar as correções pela Engenharia.'
+
     },
 
     // --- FORMAÇÃO ACADÊMICA ---
