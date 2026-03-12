@@ -29,17 +29,21 @@ export const InfoItem: React.FC<{ info: PersonalInfo }> = ({ info }) => {
 
   switch (key) {
     case 'Phone':
-      { const phoneLink = `https://wa.me/${value.replace(/\D/g, '')}`;
-      content = <a href={phoneLink} target="_blank" rel="noopener noreferrer">{value}</a>;
-      break; }
+      {
+        const phoneLink = `https://wa.me/${value.replace(/\D/g, '')}`;
+        content = <a href={phoneLink} target="_blank" rel="noopener noreferrer">{value}</a>;
+        break;
+      }
     case 'Email':
       content = <a href={`mailto:${value}`}>{value}</a>;
       break;
     case 'LinkedIn':
     case 'GitHub':
-      { const displayName = value.split('/').filter(Boolean).pop() || value;
-      content = <a href={value} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">{displayName} <ExternalLink size={14} /></a>;
-      break; }
+      {
+        const displayName = value.split('/').filter(Boolean).pop() || value;
+        content = <a href={value} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">{displayName} <ExternalLink size={14} /></a>;
+        break;
+      }
     default:
       content = <span className={highlight ? 'text-green-400' : 'text-white'}>{value}</span>;
       break;
@@ -66,7 +70,11 @@ export const PersonalInfos: React.FC<{ personal: PersonalInfo[] }> = React.memo(
       ))}
     </div>
     <div className="mt-10 flex justify-start">
-      <a href="/data/cv-guilherme.pdf" download className="group relative inline-flex items-center justify-center py-3 px-8 text-sm font-bold text-white bg-transparent border-2 border-custom-gold rounded-full uppercase tracking-wider overflow-hidden transition-all duration-300 hover:text-dark-bg">
+      <a
+        href="/data/cv-guilherme.pdf"
+        download="Guilherme_dos_Anjos_Macedo_CV.pdf"
+        className="group relative inline-flex items-center justify-center py-3 px-8 text-sm font-bold text-white bg-transparent border-2 border-custom-gold rounded-full uppercase tracking-wider overflow-hidden transition-all duration-300 hover:text-dark-bg"
+      >
         <span className="absolute inset-0 bg-custom-gold transition-all duration-300 ease-out transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
         <span className="relative z-10 flex items-center">
           DOWNLOAD CV
@@ -101,12 +109,12 @@ export const Skills: React.FC<{ skills: Skill[] }> = React.memo(({ skills }) => 
 export const ExperienceAndEducation: React.FC<{ timeline: TimelineItemType[] }> = React.memo(({ timeline }) => {
   const experiences = timeline.filter((item) => item.type === 'experience');
   const educations = timeline.filter((item) => item.type === 'education');
-  
+
   return (
     <div>
       <SectionTitle>Experience & Education</SectionTitle>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-8">
-        
+
         {/* Coluna de Experiências com Scroll Invisível */}
         <div className="max-h-[30rem] overflow-y-auto pr-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {experiences.map((item) => (
