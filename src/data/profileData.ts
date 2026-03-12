@@ -134,7 +134,7 @@ const ABOUT_ME_DATA: AboutSectionData = {
       year: 'FEV 2021 - JUL 2022',
       title: 'ANALISTA DE SUPORTE TÉCNICO',
       institution: 'Brint Comércio e Indústria',
-      description: 'Suporte N1/N2 em hardware, redes e software[cite: 21]. Manutenção de telas e lógica nos sistemas WMS/WCS [cite: 22] e manipulação de dados via SQL (Oracle/PostgreSQL)[cite: 23].'
+      description: 'Suporte N1/N2 em hardware, redes e software. Manutenção de telas e lógica nos sistemas WMS/WCS  e manipulação de dados via SQL (Oracle/PostgreSQL).'
     },
     {
       type: 'education',
