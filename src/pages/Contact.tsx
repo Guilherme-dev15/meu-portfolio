@@ -1,7 +1,6 @@
-import React, { useState, type ChangeEvent, type FormEvent } from 'react';
-import { Briefcase, Mail, MessageSquare, Globe, Send } from 'lucide-react';
+import React from 'react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
-// Props de Title tipadas explicitamente
 interface TitleProps {
   title: string;
 }
@@ -15,137 +14,58 @@ const Title: React.FC<TitleProps> = ({ title }) => (
   </h2>
 );
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
 const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  // Typagem explícita do evento de input change
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Tipagem explícita do evento de submit
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // Lógica de envio do formulário aqui
-    console.log('Dados do formulário:', formData);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
   return (
-    <section id="contact" className="min-h-screen p-4 md:p-10 bg-gray-900 flex items-center justify-center">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="contact" className="min-h-screen p-4 md:p-10 bg-[#121212] flex items-center justify-center">
+      <div className="max-w-4xl mx-auto w-full text-center">
         <Title title="Get in Touch" />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Informações de Contato */}
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-6">NÃO SEJA TÍMIDO!</h3>
-            <p className="text-gray-400 mb-8 max-w-md">
-              Sinta-se à vontade para entrar em contato comigo. Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte de suas visões.
-            </p>
+        
+        <div className="bg-[#1a1a1a] border border-yellow-500/20 rounded-2xl p-8 md:p-16 shadow-2xl relative overflow-hidden">
+          {/* Efeito de brilho minimalista no topo do card */}
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
+          
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Vamos construir algo incrível juntos?</h3>
+          <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Estou aberto a novas oportunidades e desafios técnicos. 
+            Seja para uma vaga de Desenvolvedor Full Stack ou para tirar um projeto inovador do papel, minha caixa de entrada está sempre aberta.
+          </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <Briefcase className="text-yellow-500 mr-4 mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase">ENDEREÇO</h4>
-                  <p className="text-lg text-white">123 Street New York City, United States Of America 750065.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <Mail className="text-yellow-500 mr-4 mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase">ME ENVIE UM EMAIL</h4>
-                  <p className="text-lg text-white">seu.email@exemplo.com</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <MessageSquare className="text-yellow-500 mr-4 mt-1 flex-shrink-0" size={24} />
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-400 uppercase">ME LIGUE</h4>
-                  <p className="text-lg text-white">+55 (XX) 9XXXX-XXXX</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Ícones Sociais */}
-            <div className="flex space-x-4 mt-8">
-              {['facebook', 'twitter', 'youtube', 'github'].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-400 hover:text-yellow-500 transition duration-300"
-                  aria-label={`Link para ${social}`}
-                >
-                  <Globe size={20} />
-                </a>
-              ))}
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            {/* Botão Principal de E-mail */}
+            <a
+              href="mailto:guilherme.macedo1598@gmail.com"
+              className="group relative inline-flex items-center justify-center py-4 px-10 text-base font-bold text-gray-900 bg-yellow-500 rounded-full uppercase tracking-wider overflow-hidden transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:shadow-[0_0_30px_rgba(234,179,8,0.5)]"
+            >
+              <Mail className="mr-3" size={22} />
+              ME ENVIE UM E-MAIL
+            </a>
           </div>
 
-          {/* Formulário de Contato */}
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                name="name"
-                placeholder="SEU NOME"
-                value={formData.name}
-                onChange={handleChange}
-                className="bg-gray-700 text-white p-4 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none border border-gray-700"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="SEU EMAIL"
-                value={formData.email}
-                onChange={handleChange}
-                className="bg-gray-700 text-white p-4 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none border border-gray-700"
-                required
-              />
+          {/* Redes Sociais e Links Extras */}
+          <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col items-center">
+            <p className="text-sm text-gray-500 mb-6 uppercase tracking-widest">Ou me encontre nas redes</p>
+            <div className="flex gap-6">
+              <a
+                href="https://www.linkedin.com/in/guilherme-a-anjos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-yellow-500 hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href="https://github.com/Guilherme-dev15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-yellow-500 hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
+                aria-label="GitHub"
+              >
+                <Github size={24} />
+              </a>
             </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="ASSUNTO"
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-full bg-gray-700 text-white p-4 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none border border-gray-700"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="SUA MENSAGEM"
-              rows={6}
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full bg-gray-700 text-white p-4 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none border border-gray-700 resize-none"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className="group flex items-center py-3 px-6 text-sm font-bold text-gray-900 bg-yellow-500 rounded-full uppercase tracking-wider shadow-lg hover:shadow-yellow-500/50 transition duration-300 transform hover:scale-[1.02]"
-            >
-              ENVIAR MENSAGEM
-              <span className="ml-3 p-1 bg-gray-900 rounded-full group-hover:bg-gray-800 transition">
-                <Send className="text-yellow-500" size={16} />
-              </span>
-            </button>
-          </form>
+          </div>
+          
         </div>
       </div>
     </section>

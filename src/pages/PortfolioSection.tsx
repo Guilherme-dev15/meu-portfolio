@@ -131,7 +131,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ data }) => {
   }, [activeFilter, data]);
 
   return (
-    <section id="portfolio" className="min-h-screen py-16 bg-dark-bg">
+    <section id="portfolio" className="min-h-screen py-16 bg-[#0A0A0A]">
       <div className="container mx-auto px-4">
         <Title main="My Portfolio" background="Works" />
 

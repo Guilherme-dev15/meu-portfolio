@@ -1,3 +1,4 @@
+ 
 // src/App.tsx
 
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
@@ -9,13 +10,12 @@ import PROFILE_DATA from './data/profileData';
 import HomeSection from './pages/Home';
 import AboutMeSection from './pages/AboutMeSection'; // Importando a nova seção
 import PortfolioSection from './pages/PortfolioSection';
-import BlogSection from './pages/Blog';
 import ContactSection from './pages/Contact';
 import AboutMeModal from './pages/AboutMeModal'; // O modal que já tínhamos
 import Sidebar from './layouts/Sidebar';
 
 // Tipos para controle de estado e navegação
-type SectionId = 'home' | 'about' | 'portfolio' | 'blog' | 'contact';
+type SectionId = 'home' | 'about' | 'portfolio' | 'contact';
 type ActiveSection = SectionId;
 
 const App: React.FC = () => {
@@ -27,7 +27,6 @@ const App: React.FC = () => {
     home: React.createRef<HTMLElement>(),
     about: React.createRef<HTMLElement>(),
     portfolio: React.createRef<HTMLElement>(),
-    blog: React.createRef<HTMLElement>(),
     contact: React.createRef<HTMLElement>(),
   }), []);
 
@@ -67,7 +66,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-dark-bg text-white font-sans relative">
       <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
-      
+
       <main>
         <section id="home" ref={sectionRefs.home}>
           <HomeSection data={PROFILE_DATA} onOpenAboutMe={openAboutMeModal} />
@@ -81,9 +80,13 @@ const App: React.FC = () => {
         <section id="portfolio" ref={sectionRefs.portfolio}>
           <PortfolioSection data={PROFILE_DATA.portfolio} />
         </section>
-        <section id="blog" ref={sectionRefs.blog}>
-          <BlogSection data={PROFILE_DATA.blogPosts} />
-        </section>
+        {
+          /**
+          <section id="blog" ref={sectionRefs.blog}>
+            <BlogSection data={PROFILE_DATA.blogPosts} />
+          </section>
+           */
+        }
         <section id="contact" ref={sectionRefs.contact}>
           <ContactSection />
         </section>

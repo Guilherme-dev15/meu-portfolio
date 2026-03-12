@@ -18,7 +18,7 @@
 
 :root {
   /* Define a cor primária para o tema dark, consistente com o bg-gray-900 */
-  --color-bg-primary: #111827; 
+  --color-bg-primary: #0a0a0a; 
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937; /* cinza escuro */
+  background: #3b3b3b; /* cinza escuro */
 }
 
 ::-webkit-scrollbar-thumb {

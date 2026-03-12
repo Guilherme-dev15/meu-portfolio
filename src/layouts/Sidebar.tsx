@@ -1,7 +1,7 @@
 import React from 'react';
-import { Home, User, Briefcase, Mail, BookOpen } from 'lucide-react';
+import { Home, User, Briefcase, Mail } from 'lucide-react';
 
-type NavItemId = 'home' | 'about' | 'portfolio' | 'blog' | 'contact';
+type NavItemId = 'home' | 'about' | 'portfolio' | 'contact';
 
 interface SidebarProps {
   activeSection: NavItemId;
@@ -13,7 +13,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeSection, onNavClick }) => {
     { id: 'home' as const, icon: Home, label: 'Home' },
     { id: 'about' as const, icon: User, label: 'Sobre Mim' },
     { id: 'portfolio' as const, icon: Briefcase, label: 'Portfólio' },
-    { id: 'blog' as const, icon: BookOpen, label: 'Blog' },
     { id: 'contact' as const, icon: Mail, label: 'Contato' },
   ];
 

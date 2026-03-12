@@ -12,15 +12,15 @@ import type { ProfileData, Project, BlogPost, AboutSectionData } from '../types/
 const PORTFOLIO_DATA: Project[] = [
   {
     id: 1,
-    category: 'API',
-    title: 'GitHub API',
-    imageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif',
+    category: 'FULL-STACK',
+    title: 'CurriculoPro - SaaS de Currículos',
+    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif',
     details: {
-      project: 'API REST para catálogo de filmes',
-      language: 'HTML, CSS, JavaScript',
+      project: 'CurriculoPro é uma aplicação web full-stack (micro-SaaS) que permite aos utilizadores criar, gerir, partilhar e analisar currículos de forma profissional.',
+      language: 'TypeScript, Vue, Node.js, Express, JWT, Tailwind, Prisma, PostgreSQL',
       client: 'Projeto Pessoal',
-      previewUrl: 'https://guilherme-dev15.github.io/desafio-git-api-fetch/',
-      modalImageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif'
+      previewUrl: 'https://github.com/Guilherme-dev15/CurriculoPro',
+      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif'
     }
   },
   {
@@ -30,7 +30,7 @@ const PORTFOLIO_DATA: Project[] = [
     imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/dash.gif',
     details: {
       project: 'Sistema de Gestão Empresarial (ERP/PDV)',
-      language: 'TypeScript, TypeScript, Firebase (Firestore, Auth)',
+      language: 'React, TypeScript, Firebase (Firestore, Auth)',
       client: 'Projeto Pessoal',
       previewUrl: 'https://github.com/Guilherme-dev15/clean-app',
       modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/orcamento.gif'
@@ -38,24 +38,24 @@ const PORTFOLIO_DATA: Project[] = [
   },
   {
     id: 3,
-    category: 'FULL-STACK',
-    title: ' CurriculoPro - SaaS de Currículos',
-    imageSrc: 'https://private-user-images.githubusercontent.com/49658386/507954151-84cfd0cf-f706-4e04-8e54-f406b5eb7715.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMyMzk5MjQsIm5iZiI6MTc3MzIzOTYyNCwicGF0aCI6Ii80OTY1ODM4Ni81MDc5NTQxNTEtODRjZmQwY2YtZjcwNi00ZTA0LThlNTQtZjQwNmI1ZWI3NzE1LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzExVDE0MzM0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjNGYwZGYwNTFmMGU2ZmFiOTdkNTNhNjg5ZDJjNGJkMTRjNWIwMGNlMGM4NjE1NWE4OWRhMTNhZTI0OGE3NGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.SmCN3gvTligT0hQ4SCOlvBXaf_bg-6TDW4jxuA2UsQE',
+    category: 'BACK-END',
+    title: 'Git Automation CLI – gitmenu',
+    imageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif',
     details: {
-      project: 'CurriculoPro é uma aplicação web full-stack (micro-SaaS) que permite aos utilizadores criar, gerir, partilhar e analisar currículos de forma profissional.',
-      language: 'TypeScript, Vue, Node.js, Express, JWT, Tailwind, Prisma, PostgreSQL',
+      project: 'Ferramenta de Automação e CLI para Git',
+      language: 'Bash, FZF',
       client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/CurriculoPro',
-      modalImageSrc: 'https://private-user-images.githubusercontent.com/49658386/507954151-84cfd0cf-f706-4e04-8e54-f406b5eb7715.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMyMzk5MjQsIm5iZiI6MTc3MzIzOTYyNCwicGF0aCI6Ii80OTY1ODM4Ni81MDc5NTQxNTEtODRjZmQwY2YtZjcwNi00ZTA0LThlNTQtZjQwNmI1ZWI3NzE1LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzExVDE0MzM0NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjNGYwZGYwNTFmMGU2ZmFiOTdkNTNhNjg5ZDJjNGJkMTRjNWIwMGNlMGM4NjE1NWE4OWRhMTNhZTI0OGE3NGYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.SmCN3gvTligT0hQ4SCOlvBXaf_bg-6TDW4jxuA2UsQE'
+      previewUrl: 'https://github.com/Guilherme-dev15/git-automation-tool',
+      modalImageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif'
     }
   },
   {
     id: 4,
-    category: 'API',
+    category: 'FRONT-END', // Ajustei a categoria para ficar mais precisa que "API"
     title: 'Rick & Morty SPA',
     imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/l5-networks-desafio/refs/heads/main/Rick%20Morty.gif',
     details: {
-      project: 'Rick & Morty SPA',
+      project: 'Single Page Application com consumo de API REST',
       language: 'Angular 20, TypeScript, SCSS3, Angular Material',
       client: 'Projeto Pessoal',
       previewUrl: 'https://rickmorty-4vlcxnozg-guilherme-dev15s-projects.vercel.app/profile',
@@ -64,30 +64,30 @@ const PORTFOLIO_DATA: Project[] = [
   },
   {
     id: 5,
-    category: 'BACK-END',
-    title: 'Git Automation CLI – gitmenu',
-    imageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif',
-    details: {
-      project: 'Git Automation CLI – gitmenu',
-      language: 'Bash, FZF',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/git-automation-tool',
-      modalImageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif'
-    }
-  },
-    {
-    id: 6,
     category: 'FULL-STACK',
     title: 'Pokémon Pokedex',
     imageSrc: 'https://github.com/Guilherme-dev15/project-pokedex-react/raw/main/src/assets/Pokedex-react.gif',
     details: {
-      project: 'Pokémon Pokedex',
+      project: 'Aplicação Web Interativa consumindo a PokeAPI',
       language: 'React, Vite, Styled Components',
       client: 'Projeto Pessoal',
       previewUrl: 'https://guilherme-dev15.github.io/project-pokedex-react/',
       modalImageSrc: 'https://github.com/Guilherme-dev15/project-pokedex-react/raw/main/src/assets/Pokedex-react.gif'
     }
   },
+  {
+    id: 6,
+    category: 'FRONT-END', // Ajustado de "API" para "FRONT-END"
+    title: 'GitHub API',
+    imageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif',
+    details: {
+      project: 'Buscador de perfis consumindo a API pública do GitHub',
+      language: 'HTML, CSS, JavaScript',
+      client: 'Projeto Pessoal',
+      previewUrl: 'https://guilherme-dev15.github.io/desafio-git-api-fetch/',
+      modalImageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif'
+    }
+  }
 ];
 
 // --- SEÇÃO: BLOG ---
@@ -107,7 +107,6 @@ const ABOUT_ME_DATA: AboutSectionData = {
     { key: 'Freelance', value: 'Available', highlight: true },
     { key: 'Address', value: 'São Paulo - SP, Brazil' },
     { key: 'Email', value: 'guilherme.macedo1598@gmail.com' },
-    { key: 'Phone', value: '+55 11 97839-9326' },
     { key: 'LinkedIn', value: 'https://www.linkedin.com/in/guilherme-a-anjos/' },
     { key: 'GitHub', value: 'https://github.com/Guilherme-dev15' },
     { key: 'Languages', value: 'Portuguese (Native), English (Technical)' },
@@ -141,14 +140,14 @@ const ABOUT_ME_DATA: AboutSectionData = {
       year: '2023 - ATUAL',
       title: 'ASSISTENTE DE INFRAESTRUTURA DE TI',
       institution: 'Pashal Locadora de Equipamentos',
-      description: 'Foco em automação corporativa (PowerShell) e DevOps. Fui o responsável técnico pela implantação do sistema ITSM (GLPI) do zero, além de atuar no monitoramento proativo com Zabbix/Grafana.'
+      description: 'Responsável técnico pela implantação do sistema ITSM (GLPI) do zero e administração de servidores. Forte atuação em automação corporativa com scripts em PowerShell para deploy em massa, além de monitoramento proativo (Zabbix/Grafana) e governança de Active Directory, mantendo SLAs de resolução acima de 75%.'
     },
     {
       type: 'experience',
       year: '2021 - 2022',
       title: 'ANALISTA DE SUPORTE TÉCNICO',
       institution: 'Brint Comércio e Indústria',
-      description: 'Troubleshooting avançado em sistemas de logística (WMS/WCS). Diferencial na realização de consultas e validações em bancos de dados relacionais (Oracle e PostgreSQL) para diagnóstico de falhas em aplicações.'
+      description: 'Atuação como Suporte Técnico especializado em sistemas logísticos e corporativos (WMS, WCS e CRM). Experiência no diagnóstico de falhas em aplicações e validação de regras de negócio, com diferencial na execução de consultas em bancos de dados relacionais (Oracle e PostgreSQL) para análise de logs e rastreamento de incidentes em ambiente de produção.'
     },
 
     // --- FORMAÇÃO ACADÊMICA ---

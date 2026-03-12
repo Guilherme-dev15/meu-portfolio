@@ -33,7 +33,7 @@ const AboutMeSection: React.FC<AboutMeSectionProps> = ({ data }) => {
   const { personal, stats, skills, timeline } = data;
 
   return (
-    <section className="min-h-screen py-16 bg-dark-bg">
+    <section className="min-h-screen py-16 bg-[#121212]">
         <div className="container mx-auto px-4">
             <Title main="About Me" background="Resume" />
             
