@@ -1,7 +1,7 @@
 // src/data/profileData.ts
 
 /**
- * @file Fonte da verdade completa para o portfólio de Guilherme dos Anjos Macedo.
+ * @file Fonte da verdade completa para o portfólio de Guilherme dos Anjos ANJOS.
  */
 
 import { Briefcase, Rocket, Wrench, Monitor } from 'lucide-react';
@@ -92,7 +92,7 @@ const PORTFOLIO_DATA: Project[] = [
 // --- SEÇÃO: SOBRE MIM ---
 const ABOUT_ME_DATA: AboutSectionData = {
   personal: [
-    { key: 'Nome', value: 'Guilherme Macedo' },
+    { key: 'Nome', value: 'Guilherme dos Anjos Macedo' },
     { key: 'Cargo', value: 'Desenvolvedor Full Stack' },
     { key: 'Especialidade', value: 'JavaScript, TypeScript & Node.js' },
     { key: 'Freelance', value: 'Disponível', highlight: true },
@@ -154,7 +154,7 @@ const ABOUT_ME_DATA: AboutSectionData = {
 };
 
 const PROFILE_DATA: ProfileData = {
-  name: 'GUILHERME MACEDO',
+  name: 'GUILHERME ANJOS',
   title: 'FULL STACK DEVELOPER | INFRAESTRUTURA',
   shortDescription: "Desenvolvedor Full Stack com forte visão de infraestrutura. Construo aplicações web completas, do banco de dados ao monitoramento proativo.",
   about: ABOUT_ME_DATA,
