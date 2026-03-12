@@ -53,7 +53,7 @@ const PORTFOLIO_DATA: Project[] = [
 // --- SEÇÃO: SOBRE MIM ---
 const ABOUT_ME_DATA: AboutSectionData = {
   personal: [
-    { key: 'Nome', value: 'Guilherme dos Anjos Macedo' },
+    { key: 'Nome', value: 'Guilherme Macedo' },
     { key: 'Cargo', value: 'Desenvolvedor Full Stack' },
     { key: 'Especialidade', value: 'JavaScript, TypeScript & Node.js' },
     { key: 'Freelance', value: 'Disponível', highlight: true },
