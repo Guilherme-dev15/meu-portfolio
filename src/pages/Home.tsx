@@ -73,11 +73,11 @@ const HomeSection: React.FC<HomeProps> = ({ onOpenAboutMe, data }) => (
 
       {/* Texto de Introdução */}
       <div className="text-center lg:text-left flex-1">
-        <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+        <h3 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-4">
           <span className="text-custom-gold">—</span> I'M <span className="text-custom-gold">{data.name.toUpperCase()}.</span>
           <br />
           {data.title.toUpperCase()}
-        </h2>
+        </h3>
         <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0">
           {data.shortDescription}
         </p>
