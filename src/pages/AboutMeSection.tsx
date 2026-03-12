@@ -18,7 +18,7 @@ interface AboutMeSectionProps {
 
 /** Título principal para a seção de página inteira */
 const Title: React.FC<{ main: string; background: string }> = ({ main, background }) => (
-    <h2 className="text-5xl md:text-7xl font-extrabold text-white text-center mb-16 pt-8 relative">
+    <h3 className="text-5xl md:text-7xl font-extrabold text-white text-center mb-16 pt-8 relative">
       <span className="text-gray-500/10 tracking-widest text-[5rem] md:text-[8rem] absolute -top-10 left-1/2 transform -translate-x-1/2 z-0 whitespace-nowrap pointer-events-none">
         {background.toUpperCase()}
       </span>
@@ -26,7 +26,7 @@ const Title: React.FC<{ main: string; background: string }> = ({ main, backgroun
         <span className="text-custom-gold">{main.toUpperCase().split(' ')[0]}</span>
         {' ' + main.toUpperCase().split(' ').slice(1).join(' ')}
       </span>
-    </h2>
+    </h3>
 );
 
 const AboutMeSection: React.FC<AboutMeSectionProps> = ({ data }) => {
