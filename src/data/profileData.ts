@@ -127,7 +127,7 @@ const ABOUT_ME_DATA: AboutSectionData = {
       year: 'JUL 2023 - ATUAL',
       title: 'ASSISTENTE DE INFRAESTRUTURA DE TI',
       institution: 'Pashal Locadora de Equipamentos',
-      description: 'Liderou a implantação do GLPI do zero[cite: 18]. Responsável pela administração de ambientes críticos (Zabbix, Grafana, AD) e resolução de incidentes N1/N2[cite: 20].'
+      description: 'Liderou a implantação do GLPI do zero. Responsável pela administração de ambientes críticos (Zabbix, Grafana, AD) e resolução de incidentes N1/N2.'
     },
     {
       type: 'experience',
@@ -141,14 +141,14 @@ const ABOUT_ME_DATA: AboutSectionData = {
       year: 'CURSANDO',
       title: 'PÓS-GRADUAÇÃO EM ENGENHARIA DE SOFTWARE',
       institution: 'Anhanguera',
-      description: 'Foco em arquitetura de sistemas e metodologias ágeis[cite: 25].'
+      description: 'Foco em arquitetura de sistemas e metodologias ágeis.'
     },
     {
       type: 'education',
       year: '2019',
       title: 'TECNÓLOGO EM ANÁLISE E DESENV. DE SISTEMAS',
       institution: 'UNICID',
-      description: 'Base sólida em desenvolvimento e modelagem de banco de dados[cite: 25].'
+      description: 'Base sólida em desenvolvimento e modelagem de banco de dados.'
     },
   ],
 };
