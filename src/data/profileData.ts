@@ -155,7 +155,7 @@ const ABOUT_ME_DATA: AboutSectionData = {
 
 const PROFILE_DATA: ProfileData = {
   name: 'GUILHERME ANJOS',
-  title: 'FULL STACK DEVELOPER | INFRAESTRUTURA',
+  title: 'FULL STACK DEVELOPER',
   shortDescription: "Desenvolvedor Full Stack com forte visão de infraestrutura. Construo aplicações web completas, do banco de dados ao monitoramento proativo.",
   about: ABOUT_ME_DATA,
   portfolio: PORTFOLIO_DATA,
