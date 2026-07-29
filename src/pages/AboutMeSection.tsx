@@ -35,7 +35,7 @@ const AboutMeSection: React.FC<AboutMeSectionProps> = ({ data }) => {
   return (
     <section className="min-h-screen py-16 bg-[#121212]">
         <div className="container mx-auto px-4">
-            <Title main="About Me" background="Resume" />
+            <Title main="Sobre mim" background="Resumo" />
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-7">

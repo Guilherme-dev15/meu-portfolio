@@ -18,7 +18,7 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="min-h-screen p-4 md:p-10 bg-[#121212] flex items-center justify-center">
       <div className="max-w-4xl mx-auto w-full text-center">
-        <Title title="Get in Touch" />
+        <Title title="Entre em contato" />
         
         <div className="bg-[#1a1a1a] border border-yellow-500/20 rounded-2xl p-8 md:p-16 shadow-2xl relative overflow-hidden">
           {/* Efeito de brilho minimalista no topo do card */}
@@ -26,8 +26,8 @@ const ContactSection: React.FC = () => {
           
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Vamos construir algo incrível juntos?</h3>
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Estou aberto a novas oportunidades e desafios técnicos. 
-            Seja para uma vaga de Desenvolvedor Full Stack ou para tirar um projeto inovador do papel, minha caixa de entrada está sempre aberta.
+            Estou aberto a novas oportunidades e desafios técnicos.
+            Busco contribuir em produtos web e sistemas de gestão, unindo desenvolvimento Full Stack à experiência prática em infraestrutura e operação.
           </p>
 
           <div className="flex flex-col items-center justify-center">
@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
 
           {/* Redes Sociais e Links Extras */}
           <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col items-center">
-            <p className="text-sm text-gray-500 mb-6 uppercase tracking-widest">Ou me encontre nas redes</p>
+            <p className="text-sm text-gray-500 mb-6 uppercase tracking-widest">Encontre-me também nas redes</p>
             <div className="flex gap-6">
               <a
                 href="https://www.linkedin.com/in/guilherme-a-anjos/"

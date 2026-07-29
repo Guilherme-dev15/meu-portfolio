@@ -13,9 +13,9 @@ interface HomeProps {
 // Criamos o código exato aqui fora. A indentação que você vê aqui 
 // é exatamente a que vai aparecer na tela.
 const codeSnippet = `const dev = {
-  name: 'Guilherme Macedo',
+  name: 'Guilherme dos Anjos Macedo',
   role: 'Full Stack Developer',
-  stack: ['React', 'Vue 3', 'Node.js'],
+  stack: ['React', 'TypeScript', 'Node.js'],
   db: ['PostgreSQL', 'MongoDB'],
   tools: ['Docker', 'Git', 'Firebase'],
 

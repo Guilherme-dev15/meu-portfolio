@@ -1,165 +1,157 @@
-// src/data/profileData.ts
-
-/**
- * @file Fonte da verdade completa para o portfólio de Guilherme dos Anjos ANJOS.
- */
-
 import { Briefcase, Rocket, Wrench, Monitor } from 'lucide-react';
 import type { ProfileData, Project, AboutSectionData } from '../types/portfolio';
 
-// --- SEÇÃO: PORTFÓLIO (Todos os 6 projetos restaurados) ---
 const PORTFOLIO_DATA: Project[] = [
   {
     id: 1,
     category: 'FULL-STACK',
-    title: 'CurriculoPro - SaaS de Currículos',
-    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif',
+    title: 'Clean APP — ERP e PDV',
+    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/dash.gif',
     details: {
-      project: 'SaaS para criação e gestão de currículos profissionais com autenticação JWT e PostgreSQL.',
-      language: 'TypeScript, Vue 3, Node.js, Prisma, PostgreSQL',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/CurriculoPro',
-      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif'
-    }
+      project: 'ERP/PDV desenvolvido para uma operação real, com vendas, estoque, clientes, fornecedores, fluxo de caixa e relatórios.',
+      language: 'React, TypeScript, Firebase Authentication e Firestore',
+      client: 'Projeto independente',
+      previewUrl: 'https://github.com/Guilherme-dev15/clean-app',
+      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/orcamento.gif',
+    },
   },
   {
     id: 2,
     category: 'FULL-STACK',
-    title: 'Clean APP - ERP/PDV',
-    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/dash.gif',
+    title: 'Hive ERP — ERP e catálogo online',
+    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/HivePratas/main/preview.gif',
     details: {
-      project: 'Sistema de Gestão Empresarial com PDV, integração Firebase e rotas privadas.',
-      language: 'React, TypeScript, Firebase (Firestore, Auth)',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/clean-app',
-      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/clean-app/refs/heads/main/preview/orcamento.gif'
-    }
+      project: 'Produto em desenvolvimento para gestão de lojas de pratas, semijoias e acessórios.',
+      language: 'Aplicação web, catálogo online e painel administrativo',
+      client: 'Projeto independente',
+      previewUrl: 'https://github.com/Guilherme-dev15',
+      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/HivePratas/main/preview.gif',
+    },
   },
   {
     id: 3,
-    category: 'BACK-END',
-    title: 'Git Automation CLI – gitmenu',
-    imageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif',
+    category: 'FULL-STACK',
+    title: 'CurriculoPro — Plataforma SaaS',
+    imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif',
     details: {
-      project: 'Ferramenta de linha de comando para automação de fluxos Git.',
-      language: 'Bash, FZF',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://github.com/Guilherme-dev15/git-automation-tool',
-      modalImageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif'
-    }
+      project: 'Plataforma para criação, gerenciamento, compartilhamento e análise de currículos profissionais.',
+      language: 'Vue 3, TypeScript, Pinia, Node.js, Express, Prisma e JWT',
+      client: 'Projeto independente',
+      previewUrl: 'https://github.com/Guilherme-dev15/CurriculoPro',
+      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/CurriculoPro/refs/heads/main/Preview.gif',
+    },
   },
   {
     id: 4,
+    category: 'BACK-END',
+    title: 'Git Automation CLI — gitmenu',
+    imageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif',
+    details: {
+      project: 'Ferramenta de linha de comando para automação de fluxos Git.',
+      language: 'Bash e FZF',
+      client: 'Projeto independente',
+      previewUrl: 'https://github.com/Guilherme-dev15/git-automation-tool',
+      modalImageSrc: 'https://github.com/Guilherme-dev15/git-automation-tool/raw/main/demo.gif',
+    },
+  },
+  {
+    id: 5,
     category: 'FRONT-END',
     title: 'Rick & Morty SPA',
     imageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/l5-networks-desafio/refs/heads/main/Rick%20Morty.gif',
     details: {
       project: 'Single Page Application para exploração de personagens utilizando API REST.',
-      language: 'Angular, TypeScript, Angular Material',
-      client: 'Projeto Pessoal',
+      language: 'Angular, TypeScript e Angular Material',
+      client: 'Projeto independente',
       previewUrl: 'https://rickmorty-4vlcxnozg-guilherme-dev15s-projects.vercel.app/profile',
-      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/l5-networks-desafio/refs/heads/main/Rick%20Morty.gif'
-    }
+      modalImageSrc: 'https://raw.githubusercontent.com/Guilherme-dev15/l5-networks-desafio/refs/heads/main/Rick%20Morty.gif',
+    },
   },
   {
-    id: 5,
+    id: 6,
     category: 'FRONT-END',
     title: 'Pokémon Pokedex',
     imageSrc: 'https://github.com/Guilherme-dev15/project-pokedex-react/raw/main/src/assets/Pokedex-react.gif',
     details: {
       project: 'Enciclopédia interativa consumindo a PokeAPI.',
-      language: 'React, Vite, Styled Components',
-      client: 'Projeto Pessoal',
+      language: 'React, Vite e Styled Components',
+      client: 'Projeto independente',
       previewUrl: 'https://guilherme-dev15.github.io/project-pokedex-react/',
-      modalImageSrc: 'https://github.com/Guilherme-dev15/project-pokedex-react/raw/main/src/assets/Pokedex-react.gif'
-    }
+      modalImageSrc: 'https://github.com/Guilherme-dev15/project-pokedex-react/raw/main/src/assets/Pokedex-react.gif',
+    },
   },
-  {
-    id: 6,
-    category: 'FRONT-END',
-    title: 'GitHub API Explorer',
-    imageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif',
-    details: {
-      project: 'Buscador de perfis e repositórios utilizando a API pública do GitHub.',
-      language: 'HTML5, CSS3, JavaScript',
-      client: 'Projeto Pessoal',
-      previewUrl: 'https://guilherme-dev15.github.io/desafio-git-api-fetch/',
-      modalImageSrc: 'https://github.com/Guilherme-dev15/desafio-git-api-fetch/raw/main/preview/Github-API.gif'
-    }
-  }
 ];
 
-// --- SEÇÃO: SOBRE MIM ---
 const ABOUT_ME_DATA: AboutSectionData = {
   personal: [
     { key: 'Nome', value: 'Guilherme dos Anjos Macedo' },
     { key: 'Cargo', value: 'Desenvolvedor Full Stack' },
-    { key: 'Especialidade', value: 'JavaScript, TypeScript & Node.js' },
-    { key: 'Freelance', value: 'Disponível', highlight: true },
-    { key: 'Localização', value: 'São Paulo - SP, Brasil' },
+    { key: 'Especialidade', value: 'React, TypeScript e Node.js' },
+    { key: 'Disponibilidade', value: 'Aberto a oportunidades', highlight: true },
+    { key: 'Localização', value: 'São Paulo, SP, Brasil' },
     { key: 'E-mail', value: 'guilherme.macedo1598@gmail.com' },
-    { key: 'Idiomas', value: 'Português (Nativo), Inglês (Técnico)' },
+    { key: 'Idiomas', value: 'Português (nativo), Inglês (técnico)' },
   ],
   stats: [
-    { count: '5+', label: 'ANOS DE BACKGROUND TÉCNICO', icon: Briefcase },
-    { count: '20+', label: 'PROJETOS NO GITHUB', icon: Rocket },
+    { count: '5+', label: 'ANOS EM TECNOLOGIA', icon: Briefcase },
+    { count: '3', label: 'PROJETOS PRINCIPAIS', icon: Rocket },
     { count: '15+', label: 'TECNOLOGIAS & FERRAMENTAS', icon: Wrench },
-    { count: '3+', label: 'SISTEMAS FULL STACK', icon: Monitor },
+    { count: '2', label: 'ERPs EM DESENVOLVIMENTO', icon: Monitor },
   ],
   skills: [
-    { name: 'Node.js / NestJS / PHP', percent: 85 },
-    { name: 'React.js / Vue 3 / TS', percent: 80 },
-    { name: 'SQL (PostgreSQL / Oracle)', percent: 80 },
-    { name: 'Docker / Linux / Git', percent: 85 },
-    { name: 'Monitoramento (Zabbix)', percent: 90 },
-    { name: 'Infra (AD / GLPI / Redes)', percent: 85 },
+    { name: 'React / Vue 3 / TypeScript', percent: 80 },
+    { name: 'Node.js / NestJS / Express', percent: 80 },
+    { name: 'SQL / PostgreSQL / MongoDB', percent: 80 },
+    { name: 'Docker / Linux / Git', percent: 75 },
+    { name: 'Firebase / Firestore', percent: 75 },
+    { name: 'GLPI / Zabbix / Grafana', percent: 85 },
   ],
   timeline: [
     {
       type: 'experience',
-      year: 'JAN 2024 - ATUAL',
-      title: 'DESENVOLVEDOR FULL STACK',
-      institution: 'Autônomo / Projetos Independentes',
-      description: 'Desenvolvimento de aplicações ponta a ponta (SaaS/ERPs). Foco em arquiteturas escaláveis com Node.js, React e modelagem de dados relacionais.'
-    },
-    {
-      type: 'experience',
-      year: 'JUL 2023 - ATUAL',
+      year: 'JUL 2023 – ATUAL',
       title: 'ASSISTENTE DE INFRAESTRUTURA DE TI',
       institution: 'Pashal Locadora de Equipamentos',
-      description: 'Liderou a implantação do GLPI do zero. Responsável pela administração de ambientes críticos (Zabbix, Grafana, AD) e resolução de incidentes N1/N2.'
+      description: 'Atuação em ambiente corporativo com aproximadamente 300 usuários. Implantação e sustentação do GLPI, criação de dashboard operacional no Grafana e suporte à infraestrutura, aos sistemas e aos recursos tecnológicos.',
     },
     {
       type: 'experience',
-      year: 'FEV 2021 - JUL 2022',
+      year: 'DEZ 2021 – NOV 2022',
       title: 'ANALISTA DE SUPORTE TÉCNICO',
-      institution: 'Brint Comércio e Indústria',
-      description: 'Suporte N1/N2 em hardware, redes e software. Manutenção de telas e lógica nos sistemas WMS/WCS  e manipulação de dados via SQL (Oracle/PostgreSQL).'
+      institution: 'Brint Comércio e Indústria, atualmente TGW Comércio e Serviços',
+      description: 'Suporte a sistemas corporativos de logística e automação industrial, análise de logs e investigação de inconsistências com consultas SQL em PostgreSQL e Oracle. Atuação com sistemas WMS e WCS.',
+    },
+    {
+      type: 'experience',
+      year: 'SET 2019 – DEZ 2021',
+      title: 'AUXILIAR DE CARTÓRIO / SUPORTE DE TI',
+      institution: '14º Cartório da Lapa',
+      description: 'Atendimento de suporte técnico N1, configuração de equipamentos e softwares e suporte a certificados digitais.',
     },
     {
       type: 'education',
-      year: 'CURSANDO',
+      year: 'EM ANDAMENTO',
       title: 'PÓS-GRADUAÇÃO EM ENGENHARIA DE SOFTWARE',
       institution: 'Anhanguera',
-      description: 'Foco em arquitetura de sistemas e metodologias ágeis.'
+      description: 'Formação voltada a arquitetura, desenvolvimento e evolução de sistemas de software.',
     },
     {
       type: 'education',
-      year: '2019',
-      title: 'TECNÓLOGO EM ANÁLISE E DESENV. DE SISTEMAS',
-      institution: 'UNICID',
-      description: 'Base sólida em desenvolvimento e modelagem de banco de dados.'
+      year: 'CONCLUÍDO EM 2019',
+      title: 'TECNÓLOGO EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS',
+      institution: 'Universidade Cidade de São Paulo — UNICID',
+      description: 'Formação em desenvolvimento de sistemas, programação e bancos de dados.',
     },
   ],
 };
 
 const PROFILE_DATA: ProfileData = {
-  name: 'GUILHERME ANJOS',
-  title: 'FULL STACK DEVELOPER',
-  shortDescription: "Desenvolvedor Full Stack com forte visão de infraestrutura. Construo aplicações web completas, do banco de dados ao monitoramento proativo.",
+  name: 'Guilherme dos Anjos Macedo',
+  title: 'Desenvolvedor Full Stack · React, TypeScript e Node.js',
+  shortDescription: 'Desenvolvedor Full Stack com mais de cinco anos de experiência em Infraestrutura e Suporte de TI. Construo aplicações web e sistemas de gestão, unindo desenvolvimento de produtos à experiência prática em implantação, monitoramento e sustentação em produção.',
   about: ABOUT_ME_DATA,
   portfolio: PORTFOLIO_DATA,
-  blogPosts: [], 
+  blogPosts: [],
 };
 
 export default PROFILE_DATA;

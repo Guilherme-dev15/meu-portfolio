@@ -1,8 +1,7 @@
 // src/pages/PortfolioSection.tsx
 
 /**
- * @file Renderiza a seção "My Portfolio", incluindo filtros, grade de projetos e modal de detalhes.
- * A lógica foi dividida em subcomponentes para maior clareza e reutilização.
+ * Renderiza a seção de projetos, com filtros, cards e modal de detalhes.
  */
 
 import React, { useState, useMemo } from 'react';
@@ -89,17 +88,17 @@ const PortfolioModalContent: React.FC<{ item: Project }> = ({ item }) => (
       <div className="md:w-1/2 space-y-3">
         <p className="flex items-center">
           <Folder size={16} className="text-custom-gold mr-3" />
-          Project: <span className="font-light ml-2">{item.details.project}</span>
+          Projeto: <span className="font-light ml-2">{item.details.project}</span>
         </p>
         <p className="flex items-center">
           <Code size={16} className="text-custom-gold mr-3" />
-          Language: <span className="font-light ml-2">{item.details.language}</span>
+          Tecnologias: <span className="font-light ml-2">{item.details.language}</span>
         </p>
       </div>
       <div className="md:w-1/2 space-y-3 mt-3 md:mt-0">
         <p className="flex items-center">
           <User size={16} className="text-custom-gold mr-3" />
-          Client: <span className="font-light ml-2">{item.details.client}</span>
+          Tipo: <span className="font-light ml-2">{item.details.client}</span>
         </p>
         <p className="flex items-center">
           <ExternalLink size={16} className="text-custom-gold mr-3" />
@@ -133,7 +132,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ data }) => {
   return (
     <section id="portfolio" className="min-h-screen py-16 bg-[#0A0A0A]">
       <div className="container mx-auto px-4">
-        <Title main="My Portfolio" background="Works" />
+        <Title main="Projetos" background="Portfólio" />
 
         <PortfolioFilter
           options={filterOptions}
